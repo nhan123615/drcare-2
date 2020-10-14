@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Disease;
 use Illuminate\Http\Request;
 
+
 class DiseaseController extends Controller
 {
     /**
@@ -25,7 +26,7 @@ class DiseaseController extends Controller
      */
     public function create()
     {
-        //
+        return 'yes';
     }
 
     /**
@@ -55,10 +56,14 @@ class DiseaseController extends Controller
      *
      * @param  \App\Models\Disease  $disease
      * @return \Illuminate\Http\Response
+
      */
-    public function edit(Disease $disease)
+    public function edit($id)
     {
-        //
+       /*  $category = Category::where('id', $id)->first();
+        return view('admin.category.edit',compact('category')); */
+        $diseases = Disease::where('id', $id)->first();
+        return view('admin.disease-edit', ['diseases' => $diseases]);
     }
 
     /**

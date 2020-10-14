@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{asset('admin/css/style.css')}}">
 
 {{--    <script src="{{asset('js/app.js')}}"></script>--}}
-
+@yield('head-section')
 </head>
 <body class="">
 
@@ -218,7 +218,7 @@
 
 <!-- custom-chart js -->
 <script src="{{asset('admin/js/pages/dashboard-main.js')}}"></script>
-
+@yield('footer-section')
 </body>
 
 </html>

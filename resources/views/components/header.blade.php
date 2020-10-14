@@ -73,7 +73,9 @@
                     </div>
                 </li>
 
-
+                <li class="nav-item">
+                    <a href="{{route('login')}}" class="nav-link pl-0 text-danger">Log In</a>
+                </li>
                 {{--                <li class="nav-item {{\Illuminate\Support\Facades\Route::currentRouteName() === 'department' ? "active" : ""}}"><a href="{{route('department')}}" class="nav-link">Departments</a></li>--}}
 
                 {{--                <li class="nav-item {{\Illuminate\Support\Facades\Route::currentRouteName() === 'blog' ? "active" : ""}}"><a href="{{route('blog')}}" class="nav-link">Blog</a></li>--}}

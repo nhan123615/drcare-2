@@ -20,7 +20,9 @@ class DatabaseSeeder extends Seeder
             DiseaseTypeSeeder::class,
             DoctorTypeSeeder::class,
             CategorySeeder::class,
-            ServiceTypeSeeder::class
+            ServiceTypeSeeder::class,
+            UserSeeder::class,
+            AppointmentSeeder::class
         ]);
     }
 }

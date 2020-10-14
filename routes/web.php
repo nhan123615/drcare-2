@@ -90,6 +90,8 @@ Route::get('/layout-horizontal', [AdminController::class, 'layoutHorizontal'])->
 
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin-dashboard');
 Route::get('/admin/diseases', [DiseaseController::class, 'index'])->name('admin-diseases')->middleware('auth');
+Route::resource('admin/diseases', DiseaseController::class);
+
 Route::get('/admin/appointments', [AppointmentController::class, 'index'])->name('admin-appointments')->middleware('auth');
 Route::get('/admin/doctors', [DoctorController::class, 'index'])->name('admin-doctors')->middleware('auth');
 Route::get('/admin/products', [ProductController::class, 'index'])->name('admin-products')->middleware('auth');

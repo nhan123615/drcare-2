@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li class="nav-item {{\Illuminate\Support\Facades\Route::currentRouteName() === 'admin-diseases' ? "active" : ""}}">
-                    <a href="{{route('admin-diseases')}}" class="nav-link ">
+                    <a href="{{route('diseases.index')}}" class="nav-link ">
                         <span class="pcoded-micon">
                             <i class="feather icon-layout"></i>
                         </span>

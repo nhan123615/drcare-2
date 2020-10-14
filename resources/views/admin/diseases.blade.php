@@ -26,7 +26,13 @@
                             @foreach($diseases as $disease)
                                 <tr>
                                     <td class="text-center">
-                                        <a href="#" role="button" class="btn btn-outline-primary btn-sm">Edit</a>
+                                    {{--     <a href="#" role="button" class="btn btn-outline-primary btn-sm">Edit</a> --}}
+
+                            
+                                            <a href="{{route('diseases.edit', $disease->id)}}"  class="btn btn-outline-primary btn-sm">
+                                               Edit
+                                            </a>            
+                                     
                                         &nbsp;
                                         <a href="#" role="button" class="btn btn-outline-danger btn-sm">Delete</a>
                                     </td>

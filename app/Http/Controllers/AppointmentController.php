@@ -74,7 +74,7 @@ class AppointmentController extends Controller
      */
     public function edit(Appointment $appointment)
     {
-        //
+    
     }
 
     /**
@@ -95,8 +95,9 @@ class AppointmentController extends Controller
      * @param  \App\Models\Appointment  $appointment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Appointment $appointment)
+    public function destroy($id)
     {
-        //
+        Appointment::where('id', $id)->delete();
+        return redirect()->back()->with('message', 'Delete Successfull !'); 
     }
 }

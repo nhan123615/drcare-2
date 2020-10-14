@@ -28,9 +28,16 @@
                                     </td>
                                     <td>{{$service->id}}</td>
                                     <td>{{$service->name}}</td>
-                                    <td>
+                                    <td>                        
+
                                         <span
-                                            class="badge badge-pill badge-secondary">
+                                            class="badge badge-pill 
+                                            @if($service->service_type_id ==1)badge-danger 
+                                            @elseif($service->service_type_id ==2)badge-primary
+                                            @elseif($service->service_type_id ==3)badge-success
+                                            @else badge-warning
+                                            @endif
+                                            ">
                                             {{\Illuminate\Support\Facades\DB::table('service_types')->find($service->service_type_id)->name}}
                                         </span>
                                     </td>
